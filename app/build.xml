@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="gwm" default="build" basedir="."
+	xmlns:ivy="antlib:org.apache.ivy.ant" >
+	<description>Grow with Management Default build script</description>
+
+	<!-- =================================
+	          target: resolve
+     ================================= -->
+	<target name="resolve" description="--> retrieve dependencies with Ivy">
+	    <ivy:retrieve/>
+		<ivy:repreport xml="true" graph="true" />
+	</target>
+	
+</project>
