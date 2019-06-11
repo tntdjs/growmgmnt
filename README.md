@@ -1,3 +1,3 @@
 Grow with Management
 
-Copyright Todd M. Senauskas 2019
+Copyright Grow with Management, LLC - 2019
