@@ -10,28 +10,24 @@
 <?import javafx.scene.text.Font?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-	prefHeight="670.0" prefWidth="1024.0" styleClass="root" 
+	styleClass="root" 
+	stylesheets="@FXRootScene.css" 
+	style="-fx-background-color: white;"
+	prefHeight="670.0" prefWidth="1024.0"  
 	xmlns="http://javafx.com/javafx/8.0.112" 
 	xmlns:fx="http://javafx.com/fxml/1" 
 	fx:controller="gwm.fx.ui.FXRootSceneController">
    <center>
       <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
          <image>
-            <Image url="@../../res/images/app-wallpaper.jpg" />
+            <Image url="@../images/app-wallpaper.jpg" />
          </image>
       </ImageView>
    </center>
    <top>
-      <Label text="Grow with Management" BorderPane.alignment="CENTER">
-         <font>
-            <Font name="Calibri Bold" size="53.0" />
-         </font>
-      </Label>
+      <Label text="Grow with Management" BorderPane.alignment="CENTER" id="title-label" />
    </top>
    <bottom>
-      <Label text="Copyright Grow with Management, LLC - 2019" BorderPane.alignment="CENTER" />
+      <Label text="Copyright Grow with Management, LLC - 2019" BorderPane.alignment="CENTER" id="copyright-label" />
    </bottom>
-	<stylesheets>
-		<URL value="@FXRootScene.css" />
-	</stylesheets>
 </BorderPane>

@@ -8,6 +8,7 @@ import org.apache.log4j.Logger;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import gwm.database.HibernateSessionMgr;
 import gwm.fx.ui.FXDialogs;
 import gwm.fx.ui.IFXController;
 import gwm.util.SystemPropertyMgr;
@@ -78,6 +79,9 @@ public class AppMain extends Application {
 				CloseApplication();
 			});
 
+			//Initialize Hibernate SessionFactory early
+			HibernateSessionMgr.getInstance().getSessionFactory();
+			
 			primaryStage.show();
 			INSTANCE = this;
 			
@@ -97,7 +101,8 @@ public class AppMain extends Application {
 	}
 
 	public void CloseApplication() {
-		if (FXDialogs.showConfirm("Grow with Management", "Exit, are you sure?", FXDialogs.YES, FXDialogs.NO).equals(FXDialogs.YES)) {
+		if (FXDialogs.showConfirm("Grow with Management", "Exit, are you sure?", FXDialogs.YES, FXDialogs.NO).equals(FXDialogs.YES)) {		
+			HibernateSessionMgr.getInstance().closeSessionMgr();
 			LOG.info("Application Exited Safely");
 			System.exit(0);
 		}

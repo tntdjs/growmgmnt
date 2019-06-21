@@ -1,0 +1,14 @@
+<!-- Import root application css file -->
+@import "../styles/Styles.css";
+
+#title-label {
+	-fx-font: Calibri Bold;
+	-fx-font-size: 60px;
+	-fx-text-fill: black
+}
+
+#copyright-label {
+	-fx-font: Calibri Bold;
+	-fx-font-size: 14px;
+	-fx-text-fill: black
+}
